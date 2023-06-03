@@ -12,17 +12,17 @@
 
 <!-- SEO Facebook -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://alldamnlife.com/">
+<meta property="og:url" content="">
 <meta property="og:title" content="Réduis le prix de tes abonnements - Atlas Trek Shop">
 <meta property="og:description"
     content="Moins de dépenses ? Plus d'économies ? Avec Atlas Trek Shop, réduis le prix de tes abonnements Netflix, Deezer, Spotify et bien d'autres !">
-<meta property="og:image" content="http://alldamnlife.com/wp-content/uploads/2022/06/logo-with-partner-1024x1024.png">
+<meta property="og:image" content="">
 
 <!--SEO  Twitter -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://alldamnlife.com/">
+<meta property="twitter:url" content="">
 <meta property="twitter:title" content="Réduis le prix de tes abonnements - Atlas Trek Shop">
 <meta property="twitter:description"
     content="Moins de dépenses ? Plus d'économies ? Avec Atlas Trek Shop, réduis le prix de tes abonnements Netflix, Deezer, Spotify et bien d'autres !">
 <meta property="twitter:image"
-    content="http://alldamnlife.com/wp-content/uploads/2022/06/logo-with-partner-1024x1024.png">
+    content="">
