@@ -1,0 +1,293 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "~@fortawesome/fontawesome-free/css/fontawesome";
+@import "~@fortawesome/fontawesome-free/css/regular";
+@import "~@fortawesome/fontawesome-free/css/solid";
+@import "~@fortawesome/fontawesome-free/css/brands";
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Lato", sans-serif;
+}
+
+*::-moz-selection {
+    background-color: rgb(49, 47, 136);
+    color: white;
+}
+
+*::selection {
+    background-color: rgb(49, 47, 136);
+    color: white;
+}
+
+[x-cloak] {
+    display: none;
+}
+
+img {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
+
+body {
+    text-align: center;
+    padding: 1em;
+
+    font-family: "Lato", sans-serif;
+    background-image: url(/img/SimpleShiny.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+    font-size: 2.2em;
+}
+
+/* ANIMATION CARTE FIX SAFARI  */
+.gride {
+    padding-bottom: 4px;
+    display: grid;
+    row-gap: 10px;
+    column-gap: 4px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px; 
+  }
+
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  
+}
+
+.flip-card:focus-within .flip-card-inner {
+    transform: rotateY(180deg);
+  
+}
+
+  .flip-card:hover .ribbon {
+    visibility: hidden;
+    transition-delay: 500ms;
+}
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='399' height='462' preserveAspectRatio='none' viewBox='0 0 399 462'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1001%26quot%3b)' fill='none'%3e%3crect width='399' height='462' x='0' y='0' fill='rgba(66%2c 153%2c 150%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c183.469C34.512%2c186.49%2c70.885%2c173.188%2c95.893%2c149.213C119.502%2c126.58%2c118.538%2c89.967%2c129.627%2c59.199C139.619%2c31.475%2c155.712%2c6.697%2c157.849%2c-22.695C160.371%2c-57.391%2c163.282%2c-95.637%2c142.934%2c-123.853C122.207%2c-152.595%2c84.288%2c-161.287%2c50.409%2c-171.677C16.166%2c-182.178%2c-18.968%2c-191.204%2c-54.11%2c-184.281C-91.215%2c-176.971%2c-126.839%2c-159.94%2c-152.087%2c-131.784C-177.55%2c-103.389%2c-198.393%2c-65.857%2c-194.307%2c-27.937C-190.366%2c8.637%2c-151.97%2c29.508%2c-131.418%2c60.017C-114.995%2c84.397%2c-107.104%2c113.193%2c-85.679%2c133.32C-61.061%2c156.445%2c-33.647%2c180.524%2c0%2c183.469' fill='%232b6362'%3e%3c/path%3e%3cpath d='M399 598.337C434.524 600.734 468.837 635.887 501.173 620.984 532.7719999999999 606.421 536.708 562.906 547.585 529.857 557.389 500.067 562.248 470.027 561.171 438.683 559.982 404.08 567.662 361.054 541.027 338.933 513.597 316.152 471.784 338.464 436.298 334.974 409.217 332.31100000000004 384.561 317.459 357.56600000000003 320.889 327.655 324.68899999999996 296.06600000000003 332.91700000000003 275.919 355.349 255.67 377.895 252.236 410.36 250.063 440.586 248.007 469.186 254.816 496.511 263.81399999999996 523.737 273.82 554.013 277.4 592.365 305.318 607.771 333.365 623.248 367.039 596.181 399 598.337' fill='%2369bebc'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1001'%3e%3crect width='399' height='462' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+      border-radius: 10px;
+    color: black;
+    overflow: hidden;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='399' height='462' preserveAspectRatio='none' viewBox='0 0 399 462'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1001%26quot%3b)' fill='none'%3e%3crect width='399' height='462' x='0' y='0' fill='rgba(66%2c 153%2c 150%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c183.469C34.512%2c186.49%2c70.885%2c173.188%2c95.893%2c149.213C119.502%2c126.58%2c118.538%2c89.967%2c129.627%2c59.199C139.619%2c31.475%2c155.712%2c6.697%2c157.849%2c-22.695C160.371%2c-57.391%2c163.282%2c-95.637%2c142.934%2c-123.853C122.207%2c-152.595%2c84.288%2c-161.287%2c50.409%2c-171.677C16.166%2c-182.178%2c-18.968%2c-191.204%2c-54.11%2c-184.281C-91.215%2c-176.971%2c-126.839%2c-159.94%2c-152.087%2c-131.784C-177.55%2c-103.389%2c-198.393%2c-65.857%2c-194.307%2c-27.937C-190.366%2c8.637%2c-151.97%2c29.508%2c-131.418%2c60.017C-114.995%2c84.397%2c-107.104%2c113.193%2c-85.679%2c133.32C-61.061%2c156.445%2c-33.647%2c180.524%2c0%2c183.469' fill='%232b6362'%3e%3c/path%3e%3cpath d='M399 598.337C434.524 600.734 468.837 635.887 501.173 620.984 532.7719999999999 606.421 536.708 562.906 547.585 529.857 557.389 500.067 562.248 470.027 561.171 438.683 559.982 404.08 567.662 361.054 541.027 338.933 513.597 316.152 471.784 338.464 436.298 334.974 409.217 332.31100000000004 384.561 317.459 357.56600000000003 320.889 327.655 324.68899999999996 296.06600000000003 332.91700000000003 275.919 355.349 255.67 377.895 252.236 410.36 250.063 440.586 248.007 469.186 254.816 496.511 263.81399999999996 523.737 273.82 554.013 277.4 592.365 305.318 607.771 333.365 623.248 367.039 596.181 399 598.337' fill='%2369bebc'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1001'%3e%3crect width='399' height='462' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+      border-radius: 10px;
+    color: white;
+    transform: rotateY(180deg);
+    overflow: hidden;
+  }
+
+/* BANDEAU PRIX CARTE */
+.ribbon {
+    position: absolute;
+    right: -38px;
+    z-index: 5;
+    top: 20px;
+    text-align: right;
+    color: white;
+    transform: rotate(45deg);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: rgb(58, 26, 131);
+    padding-left: 59px;
+    padding-right: 59px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Safari */
+}
+
+.ribbon2 {
+    position: absolute;
+    left: -38px;
+    top: 20px;
+    z-index: 10;
+    text-align: right;
+    color: white;
+    transform: rotate(-45deg);
+    padding-top: 4px;
+    padding-bottom: 4px;
+    background-color: rgb(58, 26, 131);
+    padding-left: 59px;
+    padding-right: 59px;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+}
+
+.clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+.clampdeux {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+
+/*DETAILS CARD_________________________________________________________*/
+.card {
+    display: block;
+    color: white;
+    width: inherit;
+    background-size: cover !important;
+    background-position: center !important;
+    height: 400px;
+    overflow: hidden;
+    padding: 1em 2em;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='399' height='462' preserveAspectRatio='none' viewBox='0 0 399 462'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1001%26quot%3b)' fill='none'%3e%3crect width='399' height='462' x='0' y='0' fill='rgba(66%2c 153%2c 150%2c 1)'%3e%3c/rect%3e%3cpath d='M0%2c183.469C34.512%2c186.49%2c70.885%2c173.188%2c95.893%2c149.213C119.502%2c126.58%2c118.538%2c89.967%2c129.627%2c59.199C139.619%2c31.475%2c155.712%2c6.697%2c157.849%2c-22.695C160.371%2c-57.391%2c163.282%2c-95.637%2c142.934%2c-123.853C122.207%2c-152.595%2c84.288%2c-161.287%2c50.409%2c-171.677C16.166%2c-182.178%2c-18.968%2c-191.204%2c-54.11%2c-184.281C-91.215%2c-176.971%2c-126.839%2c-159.94%2c-152.087%2c-131.784C-177.55%2c-103.389%2c-198.393%2c-65.857%2c-194.307%2c-27.937C-190.366%2c8.637%2c-151.97%2c29.508%2c-131.418%2c60.017C-114.995%2c84.397%2c-107.104%2c113.193%2c-85.679%2c133.32C-61.061%2c156.445%2c-33.647%2c180.524%2c0%2c183.469' fill='%232b6362'%3e%3c/path%3e%3cpath d='M399 598.337C434.524 600.734 468.837 635.887 501.173 620.984 532.7719999999999 606.421 536.708 562.906 547.585 529.857 557.389 500.067 562.248 470.027 561.171 438.683 559.982 404.08 567.662 361.054 541.027 338.933 513.597 316.152 471.784 338.464 436.298 334.974 409.217 332.31100000000004 384.561 317.459 357.56600000000003 320.889 327.655 324.68899999999996 296.06600000000003 332.91700000000003 275.919 355.349 255.67 377.895 252.236 410.36 250.063 440.586 248.007 469.186 254.816 496.511 263.81399999999996 523.737 273.82 554.013 277.4 592.365 305.318 607.771 333.365 623.248 367.039 596.181 399 598.337' fill='%2369bebc'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1001'%3e%3crect width='399' height='462' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    border-radius: 10px;
+}
+
+.panier {
+    opacity: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.newsletter {
+    opacity: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.news {
+    opacity: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btnmenu {
+    opacity: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* ETOILES COMMENTAIRE____________ */
+ #nétoile{
+    display: none;
+  }
+   
+  .etoile {
+    color: grey;
+    font-size: 2em;
+    cursor: pointer;
+  }
+   
+  .gold {
+    color: gold;
+  }
+   
+  .grey {
+    color: grey;
+  }
+   
+  .black {
+    color: black;
+  }
+
+  .clampdeux {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+  
+#place-holder-center::-webkit-input-placeholder {
+    text-align: center;
+    text-align: -webkit-center;
+  
+}
+  
+#place-holder-center::-moz-placeholder {
+    text-align: center;
+    text-align: -webkit-center;
+}
+  
+#place-holder-center:-ms-input-placeholder {
+    text-align: center;
+    text-align: -webkit-center;
+}
+  
+#place-holder-center::-ms-input-placeholder {
+    text-align: center;
+    text-align: -webkit-center;
+}
+  
+#place-holder-center::placeholder {
+    text-align: center;
+    text-align: -webkit-center;
+}
+
+#place-holder-center{
+    text-align: center;
+    text-align: -webkit-center;
+    -webkit-appearance: none; /* turn off drop-down arrow*/
+    -moz-appearance: none;
+    text-align:-moz-center;
+    appearance: none;
+}
+
+
+select {
+   /* text-indent: 33% hanging;   /* FIX POUR CENTRER SELECT  TEXT DANS SAFARI */
+    text-align: center;
+    text-align: -webkit-center;
+    -webkit-appearance: none; /* turn off drop-down arrow*/
+    -moz-appearance: none;
+    text-align:-moz-center;
+    appearance: none;
+    outline: none;
+}
+
+_::-webkit-full-page-media, _:future, :root .apple {
+
+    padding-left: 53px;
+  }
+/* Safari 10.1+ */
+
