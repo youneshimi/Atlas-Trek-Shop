@@ -6,7 +6,7 @@
 
 
 
-# Projet Atlas Trek Shop Laravel
+# Projet Atlas Trek Shop
 
 Ce projet est une boutique en ligne développée avec le framework Laravel, offrant une plateforme complète pour l'achat de produits liés au trekking et à l'aventure dans la région de l'Atlas.
 
